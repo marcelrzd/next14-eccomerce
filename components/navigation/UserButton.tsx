@@ -1,13 +1,16 @@
 "use client";
 
+import { LogOut } from "lucide-react";
 import { Session } from "next-auth";
 import { signOut } from "next-auth/react";
+import { Button } from "../ui/button";
 
 export const UserButton = ({ user }: Session) => {
   return (
     <div>
-      <button>Login</button> <br />
-      <button onClick={() => signOut()}>Logout</button>
+      <Button onClick={() => signOut()}>
+        <LogOut size={16} /> LogOut
+      </Button>
     </div>
   );
 };
