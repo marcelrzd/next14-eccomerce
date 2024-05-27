@@ -3,15 +3,20 @@ import { UserButton } from "./UserButton";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { LogIn } from "lucide-react";
+import Logo from "@/components/navigation/Logo";
 
 export default async function Nav() {
   const session = await auth();
   console.log("session", session);
   return (
-    <header className=" py-4 bg-gray-500 text-white">
+    <header className=" py-8 ">
       <nav>
         <ul className="flex justify-between">
-          <li>Logo</li>
+          <li>
+            <Link href={"/"}>
+              <Logo />
+            </Link>
+          </li>
           {!session ? (
             <li>
               <Button asChild>
