@@ -7,7 +7,7 @@ import Logo from "@/components/navigation/Logo";
 
 export default async function Nav() {
   const session = await auth();
-  console.log("session", session);
+
   return (
     <header className=" py-8 ">
       <nav>
